@@ -4,156 +4,372 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Terms & Conditions and Privacy Policy for Kanche: Goli Marbles Game, an offline Indian street-marbles game for Android.">
+  <meta name="description" content="Terms &amp; Conditions and Privacy Policy for Kanche: Goli Marbles Game, an authentic Indian street-marbles game for Android.">
   <meta name="color-scheme" content="dark">
   <link rel="icon" href="data:,">
-  <title>Kanche: Goli Marbles Game — Terms & Conditions and Privacy Policy</title>
+  <title>Kanche: Goli Marbles Game — Terms &amp; Conditions and Privacy Policy</title>
+
+  <!-- Google Fonts: Cinzel for imperial heritage headers & Outfit for modern, clean body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #0d1117;
-      --card-bg: #161b22;
-      --text: #e6edf3;
-      --text-muted: #8b949e;
-      --heading: #ffffff;
-      --accent: #f59e0b;
-      --border: #30363d;
-      --link: #58a6ff;
+      /* Kanche Signature Theme Palette */
+      --bg-base: #0c0e15;
+      --bg-deep: #08090e;
+      --card-bg: rgba(22, 25, 38, 0.78);
+      --card-border: rgba(232, 197, 71, 0.22);
+      --card-border-glow: rgba(240, 180, 41, 0.45);
+      --card-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.2);
+      
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      
+      --gold-primary: #f0b429;
+      --gold-light: #ffe9a8;
+      --gold-dim: #c8860d;
+      --gold-dark: #9a6100;
+      --gold-gradient: linear-gradient(135deg, #ffe9a8 0%, #f0b429 35%, #d98b07 70%, #9a6100 100%);
+      
+      --teal-accent: #0d9488;
+      --rose-accent: #e11d48;
+      
+      --border-soft: rgba(255, 255, 255, 0.08);
+      --chip-bg: rgba(255, 255, 255, 0.05);
+      --chip-border: rgba(232, 197, 71, 0.3);
+      --link: #f59e0b;
+      --link-hover: #fcd34d;
     }
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 32px;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      background-color: var(--bg);
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.65;
+      background-color: var(--bg-base);
       color: var(--text);
-      max-width: 800px;
+      min-height: 100vh;
+      overflow-x: hidden;
+      padding: 0;
+      position: relative;
+      background:
+        radial-gradient(120% 65% at 50% -10%, rgba(227, 154, 18, 0.16) 0%, transparent 65%),
+        radial-gradient(90% 55% at 92% 90%, rgba(13, 148, 136, 0.12) 0%, transparent 60%),
+        radial-gradient(75% 50% at 8% 85%, rgba(225, 29, 72, 0.08) 0%, transparent 55%),
+        linear-gradient(180deg, #10121a 0%, var(--bg-deep) 100%);
+    }
+
+    /* Ambient Gaming Particle & Geometric Grid */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        radial-gradient(2px 2px at 20% 25%, rgba(240, 180, 41, 0.25), transparent 60%),
+        radial-gradient(2px 2px at 75% 15%, rgba(240, 180, 41, 0.2), transparent 60%),
+        radial-gradient(1.5px 1.5px at 45% 65%, rgba(13, 148, 136, 0.25), transparent 60%),
+        radial-gradient(2px 2px at 85% 55%, rgba(225, 29, 72, 0.2), transparent 60%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+    }
+
+    .page-wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
       margin: 0 auto;
-      padding: 32px 20px 64px 20px;
+      padding: 40px 24px 80px 24px;
     }
 
     .skip {
       position: absolute;
       left: -9999px;
+      z-index: 100;
     }
 
     .skip:focus {
-      left: 12px;
-      top: 12px;
-      background: var(--accent);
+      left: 16px;
+      top: 16px;
+      background: var(--gold-primary);
       color: #000;
-      padding: 6px 10px;
-      border-radius: 6px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 8px;
     }
 
+    /* Brand Header */
     header {
       text-align: center;
-      margin-bottom: 36px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--border);
+      margin-bottom: 44px;
+      padding-bottom: 32px;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, var(--card-border) 50%, transparent 100%);
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: rgba(240, 180, 41, 0.09);
+      border: 1px solid rgba(240, 180, 41, 0.25);
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .brand-badge svg {
+      width: 12px;
+      height: 12px;
+      fill: var(--gold-primary);
     }
 
     h1 {
-      font-size: 28px;
-      margin: 0 0 8px 0;
-      color: var(--heading);
+      font-family: 'Cinzel', serif;
+      font-size: clamp(26px, 6vw, 38px);
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin: 0 0 10px 0;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 2px 20px rgba(240, 180, 41, 0.25);
     }
 
     .subtitle {
       color: var(--text-muted);
-      font-size: 14px;
+      font-size: clamp(13px, 3.2vw, 15px);
+      font-weight: 400;
+      letter-spacing: 0.3px;
     }
 
+    /* Navigation Tabs */
     nav {
       display: flex;
       justify-content: center;
-      gap: 12px;
-      margin-top: 20px;
+      gap: 14px;
+      margin-top: 26px;
+      flex-wrap: wrap;
     }
 
     .tab-btn {
-      background: var(--card-bg);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--chip-bg);
       color: var(--text);
-      border: 1px solid var(--border);
-      padding: 8px 16px;
-      border-radius: 6px;
+      border: 1px solid var(--chip-border);
+      padding: 10px 22px;
+      border-radius: 999px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
+      letter-spacing: 0.4px;
       text-decoration: none;
-      transition: all 0.2s ease;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .tab-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
+      background: rgba(240, 180, 41, 0.12);
+      border-color: var(--gold-primary);
+      color: var(--gold-light);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(240, 180, 41, 0.25);
     }
 
+    /* Content Cards */
     .card {
       background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 24px;
-      margin-bottom: 28px;
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: clamp(22px, 5vw, 36px);
+      margin-bottom: 34px;
+      box-shadow: var(--card-shadow);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      position: relative;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     section:target {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px var(--accent);
+      border-color: var(--card-border-glow);
+      box-shadow: 0 0 0 2px rgba(240, 180, 41, 0.35), var(--card-shadow);
     }
 
-    .updated {
-      color: var(--text-muted);
-      font-size: 13px;
+    .card-header {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-soft);
     }
 
     h2 {
-      font-size: 20px;
-      color: var(--accent);
-      margin-top: 0;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 8px;
+      font-family: 'Cinzel', serif;
+      font-size: clamp(20px, 4.5vw, 24px);
+      font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .updated {
+      color: var(--gold-primary);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(240, 180, 41, 0.08);
+      border: 1px solid rgba(240, 180, 41, 0.18);
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+
+    .meta-details {
+      margin-top: 14px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .meta-details b {
+      color: var(--text);
     }
 
     h3 {
+      font-family: 'Outfit', sans-serif;
       font-size: 16px;
-      color: var(--heading);
-      margin-top: 20px;
-      margin-bottom: 6px;
+      font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 0.2px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h3::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 14px;
+      border-radius: 2px;
+      background: var(--gold-primary);
     }
 
     p,
     li {
       color: var(--text);
-      font-size: 15px;
+      font-size: 14.5px;
+      font-weight: 400;
+      line-height: 1.68;
+    }
+
+    p {
+      margin-bottom: 12px;
     }
 
     ul {
       padding-left: 20px;
+      margin-bottom: 16px;
     }
 
     li {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    li strong {
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    .highlight-pill {
+      display: inline-block;
+      padding: 1px 7px;
+      border-radius: 4px;
+      background: rgba(240, 180, 41, 0.12);
+      border: 1px solid rgba(240, 180, 41, 0.25);
+      color: var(--gold-primary);
+      font-weight: 600;
+      font-size: 13.5px;
     }
 
     a {
       color: var(--link);
       text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
     }
 
     a:hover {
+      color: var(--link-hover);
       text-decoration: underline;
     }
 
+    /* Footer */
     footer {
       text-align: center;
-      font-size: 13px;
+      font-size: 12.5px;
+      color: var(--text-dim);
+      margin-top: 56px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-soft);
+      letter-spacing: 0.3px;
+    }
+
+    footer p {
+      margin-bottom: 4px;
+      color: var(--text-dim);
+    }
+
+    footer b {
       color: var(--text-muted);
-      margin-top: 48px;
-      border-top: 1px solid var(--border);
-      padding-top: 24px;
+    }
+
+    @media (max-width: 600px) {
+      .page-wrapper {
+        padding: 24px 16px 64px 16px;
+      }
+      .card {
+        padding: 20px 16px;
+        border-radius: 16px;
+      }
+      p, li {
+        font-size: 14px;
+      }
     }
 
     @media print {
@@ -161,10 +377,20 @@
         background: #fff;
         color: #000;
       }
-      .card {
-        border-color: #999;
+      body::before {
+        display: none;
       }
-      nav {
+      .card {
+        background: #fff;
+        border-color: #ccc;
+        box-shadow: none;
+        color: #000;
+      }
+      h1, h2, h3, p, li, .updated, a {
+        color: #000 !important;
+        -webkit-text-fill-color: initial !important;
+      }
+      nav, .skip {
         display: none;
       }
     }
@@ -174,118 +400,137 @@
 <body>
   <a class="skip" href="#terms">Skip to content</a>
 
-  <header>
-    <h1>Kanche: Goli Marbles Game</h1>
-    <div class="subtitle">Official Legal Terms &amp; Privacy Documentation</div>
-    <nav aria-label="Jump to section">
-      <a href="#terms" class="tab-btn">Terms &amp; Conditions</a>
-      <a href="#privacy" class="tab-btn">Privacy Policy</a>
-    </nav>
-  </header>
+  <div class="page-wrapper">
+    <header>
+      <div class="brand-badge">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+        Authentic Street Marbles
+      </div>
+      <h1>Kanche: Goli Marbles Game</h1>
+      <div class="subtitle">Official Legal Terms &amp; Privacy Documentation</div>
+      <nav aria-label="Jump to section">
+        <a href="#terms" class="tab-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Terms &amp; Conditions
+        </a>
+        <a href="#privacy" class="tab-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          Privacy Policy
+        </a>
+      </nav>
+    </header>
 
-  <main>
-    <!-- Terms and Conditions Section -->
-    <section id="terms" class="card">
-      <h2>Terms &amp; Conditions</h2>
-      <p class="updated"><b>Effective:</b> October 5, 2026 · <b>Last updated:</b> October 23, 2026</p>
-      <p><b>Developer:</b> OneTwinty Games<br>
-      <b>Contact:</b> <a href="mailto:onetwintygames@gmail.com">onetwintygames@gmail.com</a></p>
+    <main>
+      <!-- Terms and Conditions Section -->
+      <section id="terms" class="card">
+        <div class="card-header">
+          <h2>Terms &amp; Conditions</h2>
+          <span class="updated">Effective: October 5, 2026 · Last updated: October 24, 2026</span>
+          <div class="meta-details">
+            <b>Developer:</b> OneTwinty Games<br>
+            <b>Contact:</b> <a href="mailto:onetwintygames@gmail.com">onetwintygames@gmail.com</a>
+          </div>
+        </div>
 
-      <h3>1. Acceptance</h3>
-      <p>By downloading, installing or playing <strong>Kanche: Goli Marbles Game</strong> ("the Game") you agree to these Terms and to the Privacy Policy below. If you do not agree, please uninstall the Game.</p>
+        <h3>1. Acceptance</h3>
+        <p>By downloading, installing or playing <strong>Kanche: Goli Marbles Game</strong> ("the Game") you agree to these Terms and to the Privacy Policy below. If you do not agree, please uninstall the Game.</p>
 
-      <h3>2. Licence</h3>
-      <p>We grant you a personal, non-exclusive, non-transferable, revocable licence to use the Game for personal, non-commercial entertainment on devices you own or control, in line with the Google Play Terms of Service.</p>
+        <h3>2. Licence</h3>
+        <p>We grant you a personal, non-exclusive, non-transferable, revocable licence to use the Game for personal, non-commercial entertainment on devices you own or control, in line with the Google Play Terms of Service.</p>
 
-      <h3>3. Coins, items and perks</h3>
-      <ul>
-        <li>Coins, skins, boards and perks are earned by playing. They have <strong>no real-world value</strong> and cannot be sold, transferred or exchanged for money or anything outside the Game.</li>
-        <li>Your wallet holds up to <strong>500 coins</strong> (this limit may change in future updates). Coins earned while the wallet is full are not added — spend some to keep earning.</li>
-        <li>We may rebalance prices, rewards and items in updates to keep the Game fair.</li>
-        <li>The Game offers optional paid purchases (for example marble skins and an ad-removal option), priced in Indian Rupees and shown in-app before you buy. All paid purchases are processed by Google Play, not by us, and are covered by <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play's refund policy</a>. Purchases are tied to the Google account that made them and cannot be transferred between accounts.</li>
-      </ul>
+        <h3>3. Coins, items and perks</h3>
+        <ul>
+          <li>Coins, skins, boards and perks are earned by playing. They have <strong>no real-world value</strong> and cannot be sold, transferred or exchanged for money or anything outside the Game.</li>
+          <li>Your wallet holds up to <strong class="highlight-pill">2,000 coins</strong> (this limit may change in future updates). Coins earned while the wallet is full are not added — spend some to keep earning.</li>
+          <li>We may rebalance prices, rewards and items in updates to keep the Game fair and competitive.</li>
+          <li>The Game offers optional paid purchases (for example marble skins and an ad-removal option), priced in Indian Rupees and shown in-app before you buy. All paid purchases are processed by Google Play, not by us, and are covered by <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play's refund policy</a>. Purchases are tied to the Google account that made them and cannot be transferred between accounts.</li>
+        </ul>
 
-      <h3>4. Your progress</h3>
-      <p>Your progress is saved on your device. If Android backup is on for your Google Account, Android may include the Game's save in that backup and restore it when you reinstall. If you sign in with Google Play Games, your progress is also saved to your Google Play Games account so it can be restored on any device. You can delete your save in <em>Settings → Your data</em>. We are not responsible for progress lost because a device was reset, backup was turned off, or the app's data was modified outside the Game.</p>
+        <h3>4. Your progress</h3>
+        <p>Your progress is saved on your device. If Android backup is on for your Google Account, Android may include the Game's save in that backup and restore it when you reinstall. If you sign in with Google Play Games, your progress is also saved to your Google Play Games account so it can be restored on any device. You can delete your save in <em>Settings → Your data</em>. We are not responsible for progress lost because a device was reset, backup was turned off, or the app's data was modified outside the Game.</p>
 
-      <h3>5. Fair play &amp; multiplayer conduct</h3>
-      <p>Do not reverse engineer, modify, cheat, exploit bugs, or distribute modified versions of the Game. We may reset progress that was obtained by cheating or by editing save files. In multiplayer, be respectful in chat messages to other players — do not send content that is abusive, illegal, or infringes someone else's rights. We may limit or remove a player's ability to use multiplayer chat for violating this.</p>
+        <h3>5. Fair play &amp; multiplayer conduct</h3>
+        <p>Do not reverse engineer, modify, cheat, exploit bugs, or distribute modified versions of the Game. We may reset progress that was obtained by cheating or by editing save files. In multiplayer, be respectful in chat messages to other players — do not send content that is abusive, illegal, or infringes someone else's rights. We may limit or remove a player's ability to use multiplayer chat for violating this.</p>
 
-      <h3>6. Intellectual property</h3>
-      <p>The Game, its name, artwork, code and sounds belong to the developer. Kanche is inspired by traditional Indian marble games and is not affiliated with any brand. Fonts are used under the SIL Open Font License.</p>
+        <h3>6. Intellectual property</h3>
+        <p>The Game, its name, artwork, code and sounds belong to the developer. Kanche is inspired by traditional Indian marble games and is not affiliated with any brand. Fonts are used under the SIL Open Font License.</p>
 
-      <h3>7. Ending use</h3>
-      <p>You may stop using the Game at any time by uninstalling it and deleting your save. We may stop offering the Game or any feature at any time.</p>
+        <h3>7. Ending use</h3>
+        <p>You may stop using the Game at any time by uninstalling it and deleting your save. We may stop offering the Game or any feature at any time.</p>
 
-      <h3>8. Disclaimer</h3>
-      <p>The Game is provided "as is" and "as available", without warranties of any kind. We do not promise that it will be uninterrupted or error-free.</p>
+        <h3>8. Disclaimer</h3>
+        <p>The Game is provided "as is" and "as available", without warranties of any kind. We do not promise that it will be uninterrupted or error-free.</p>
 
-      <h3>9. Limitation of liability</h3>
-      <p>To the maximum extent permitted by law, the developer is not liable for indirect, incidental or consequential damages arising from use of, or inability to use, the Game. Nothing in these Terms limits rights you have under consumer-protection law that cannot be excluded.</p>
+        <h3>9. Limitation of liability</h3>
+        <p>To the maximum extent permitted by law, the developer is not liable for indirect, incidental or consequential damages arising from use of, or inability to use, the Game. Nothing in these Terms limits rights you have under consumer-protection law that cannot be excluded.</p>
 
-      <h3>10. Governing law</h3>
-      <p>These Terms are governed by the laws of India. Courts in India have jurisdiction, subject to any consumer rights you have where you live.</p>
+        <h3>10. Governing law</h3>
+        <p>These Terms are governed by the laws of India. Courts in India have jurisdiction, subject to any consumer rights you have where you live.</p>
 
-      <h3>11. Changes</h3>
-      <p>We may update these Terms. The "Last updated" date above will change, and continuing to play after an update means you accept it.</p>
-    </section>
+        <h3>11. Changes</h3>
+        <p>We may update these Terms. The "Last updated" date above will change, and continuing to play after an update means you accept it.</p>
+      </section>
 
-    <!-- Privacy Policy Section -->
-    <section id="privacy" class="card">
-      <h2>Privacy Policy</h2>
-      <p class="updated"><b>Effective:</b> October 5, 2026 · <b>Last updated:</b> October 23, 2026</p>
-      <p><b>Developer:</b> OneTwinty Games · <b>Contact:</b> <a href="mailto:onetwintygames@gmail.com">onetwintygames@gmail.com</a></p>
+      <!-- Privacy Policy Section -->
+      <section id="privacy" class="card">
+        <div class="card-header">
+          <h2>Privacy Policy</h2>
+          <span class="updated">Effective: October 5, 2026 · Last updated: October 24, 2026</span>
+          <div class="meta-details">
+            <b>Developer:</b> OneTwinty Games · <b>Contact:</b> <a href="mailto:onetwintygames@gmail.com">onetwintygames@gmail.com</a>
+          </div>
+        </div>
 
-      <h3>Summary</h3>
-      <p>Single-player Kanche works offline and needs no account. We (the developer) do not collect, sell or share your personal data, and we run no servers of our own that store it. Two features need the internet and involve other parties: the <b>Multiplayer</b> mode relays your display name and chat messages to the other player through a third-party message-relay service, and <b>Advertising</b> uses Google AdMob, which may collect data such as your advertising ID. Both are detailed below.</p>
+        <h3>Summary</h3>
+        <p>Single-player Kanche works offline and needs no account. We (the developer) do not collect, sell or share your personal data, and we run no servers of our own that store it. Two features need the internet and involve other parties: the <b>Multiplayer</b> mode relays your display name and chat messages to the other player through a third-party message-relay service, and <b>Advertising</b> uses Google AdMob, which may collect data such as your advertising ID. Both are detailed below.</p>
 
-      <h3>What is stored on your device</h3>
-      <p>Your player name, coins, levels and stars, items, settings and simple counters (wins, shots, marbles claimed) are stored in the app's private storage on your phone so the Game remembers your progress.</p>
+        <h3>What is stored on your device</h3>
+        <p>Your player name, coins, levels and stars, items, settings and simple counters (wins, shots, marbles claimed) are stored in the app's private storage on your phone so the Game remembers your progress.</p>
 
-      <h3>On-device play log (optional)</h3>
-      <p>If <em>Settings → Keep play stats on this phone</em> is on, the Game keeps a short log of its own events (for example "level started" or "level won", last 200 events) on your device. It never leaves your device. Turn it off at any time.</p>
+        <h3>On-device play log (optional)</h3>
+        <p>If <em>Settings → Keep play stats on this phone</em> is on, the Game keeps a short log of its own events (for example "level started" or "level won", last 200 events) on your device. It never leaves your device. Turn it off at any time.</p>
 
-      <h3>Android backup</h3>
-      <p>If Android backup is on for your Google Account, Android may copy the Game's save (only the save, not the app itself) to your Google Account backup and restore it when you reinstall. This is done by Google under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>; the developer cannot see it. You control it in Android Settings → Google → Backup.</p>
+        <h3>Android backup</h3>
+        <p>If Android backup is on for your Google Account, Android may copy the Game's save (only the save, not the app itself) to your Google Account backup and restore it when you reinstall. This is done by Google under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>; the developer cannot see it. You control it in Android Settings → Google → Backup.</p>
 
-      <h3>Google Play Games (optional sign-in)</h3>
-      <p>If you sign in with Google Play Games, the Game receives your Play Games player ID and display name to show who is signed in, and saves your progress to Google Play Games "Saved Games" in your Google Account. That data is stored and processed by Google under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>; the developer does not receive your email address and does not copy your data to any server of its own. You can play without signing in.</p>
+        <h3>Google Play Games (optional sign-in)</h3>
+        <p>If you sign in with Google Play Games, the Game receives your Play Games player ID and display name to show who is signed in, and saves your progress to Google Play Games "Saved Games" in your Google Account. That data is stored and processed by Google under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>; the developer does not receive your email address and does not copy your data to any server of its own. You can play without signing in.</p>
 
-      <h3>Multiplayer</h3>
-      <p>Multiplayer matches need an internet or local network connection. To find and connect you with another player, and to keep the match in sync, the Game sends your chosen display name, quick/typed chat messages, and basic match data (such as scores and turn order) through a real-time message-relay service over the internet. We do not store or read this data ourselves, and it is not used for anything beyond running the match. Players can remove multiplayer chat with the <em>Typed messages</em> setting, which restricts chat to preset quick messages only. You can play the Game entirely without ever using multiplayer.</p>
+        <h3>Multiplayer</h3>
+        <p>Multiplayer matches need an internet or local network connection. To find and connect you with another player, and to keep the match in sync, the Game sends your chosen display name, quick/typed chat messages, and basic match data (such as scores and turn order) through a real-time message-relay service over the internet. We do not store or read this data ourselves, and it is not used for anything beyond running the match. Players can remove multiplayer chat with the <em>Typed messages</em> setting, which restricts chat to preset quick messages only. You can play the Game entirely without ever using multiplayer.</p>
 
-      <h3>Advertising</h3>
-      <p>The Game shows ads (banner, interstitial, and optional rewarded-video ads) served through Google AdMob to support free play. AdMob and its partners may collect data such as your advertising ID, device information, and coarse engagement data to serve and measure ads, as described in <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's advertising policy</a>. You can buy the optional ad-removal item to stop interstitial and banner ads. Analytics in the Game itself (see "On-device play log" above) stays on your device and is not an advertising or analytics SDK.</p>
+        <h3>Advertising</h3>
+        <p>The Game shows ads (banner, interstitial, and optional rewarded-video ads) served through Google AdMob to support free play. AdMob and its partners may collect data such as your advertising ID, device information, and coarse engagement data to serve and measure ads, as described in <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's advertising policy</a>. You can buy the optional ad-removal item to stop interstitial and banner ads. Analytics in the Game itself (see "On-device play log" above) stays on your device and is not an advertising or analytics SDK.</p>
 
-      <h3>Third-party services</h3>
-      <p>The Game runs on Android and uses Google Play services (Android backup, Google Play Games, Google Play Billing for purchases, Google AdMob for ads, and a third-party message-relay service for multiplayer). Their use of data is covered by their own policies, linked above.</p>
+        <h3>Third-party services</h3>
+        <p>The Game runs on Android and uses Google Play services (Android backup, Google Play Games, Google Play Billing for purchases, Google AdMob for ads, and a third-party message-relay service for multiplayer). Their use of data is covered by their own policies, linked above.</p>
 
-      <h3>Deleting your data</h3>
-      <ul>
-        <li><b>On this phone:</b> Settings → Your data → Delete my data (immediate), or uninstall the Game.</li>
-        <li><b>Android backup:</b> Android Settings → Google → Backup → manage backups.</li>
-        <li><b>Cloud save:</b> Settings → Cloud save → Delete cloud save (immediate), or remove the Game from your Google Play Games account (Play Games app/settings → Your data).</li>
-        <li>Or email us and we will explain the steps within 30 days. Because we store nothing on our own servers, there is nothing else to delete.</li>
-      </ul>
+        <h3>Deleting your data</h3>
+        <ul>
+          <li><b>On this phone:</b> Settings → Your data → Delete my data (immediate), or uninstall the Game.</li>
+          <li><b>Android backup:</b> Android Settings → Google → Backup → manage backups.</li>
+          <li><b>Cloud save:</b> Settings → Cloud save → Delete cloud save (immediate), or remove the Game from your Google Play Games account (Play Games app/settings → Your data).</li>
+          <li>Or email us and we will explain the steps within 30 days. Because we store nothing on our own servers, there is nothing else to delete.</li>
+        </ul>
 
-      <h3>Children</h3>
-      <p>The Game is intended for players aged 13 and over and is not directed at children under 13. We do not knowingly collect personal information from anyone, including children.</p>
+        <h3>Children</h3>
+        <p>The Game is intended for players aged 13 and over and is not directed at children under 13. We do not knowingly collect personal information from anyone, including children.</p>
 
-      <h3>Security</h3>
-      <p>Your save stays in the app's private storage, which other apps cannot read. The Game does not export your save to files.</p>
+        <h3>Security</h3>
+        <p>Your save stays in the app's private storage, which other apps cannot read. The Game does not export your save to files.</p>
 
-      <h3>Changes</h3>
-      <p>We will update this page whenever the Game's data practices change (for example when sign-in or ads are added) and change the "Last updated" date.</p>
+        <h3>Changes</h3>
+        <p>We will update this page whenever the Game's data practices change (for example when sign-in or ads are added) and change the "Last updated" date.</p>
 
-      <h3>Contact</h3>
-      <p>Questions or requests: <a href="mailto:onetwintygames@gmail.com">onetwintygames@gmail.com</a>.</p>
-    </section>
-  </main>
+        <h3>Contact</h3>
+        <p>Questions or requests: <a href="mailto:onetwintygames@gmail.com">onetwintygames@gmail.com</a>.</p>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2026 OneTwinty Games &middot; Kanche: Goli Marbles Game &middot; All rights reserved.</p>
-  </footer>
-
+    <footer>
+      <p>&copy; 2026 OneTwinty Games &middot; <b>Kanche: Goli Marbles Game</b> &middot; All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 
 </html>
